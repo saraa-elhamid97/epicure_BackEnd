@@ -33,11 +33,6 @@ const restaurantsSchema = new mongoose.Schema(
       type: Array,
       required: false
     },
-    openHours: {
-      type: Array,
-      required: true
-    }
-
   },
   { timestamps: true }
 );
