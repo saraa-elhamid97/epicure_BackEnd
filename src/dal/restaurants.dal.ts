@@ -28,6 +28,7 @@ export class RestaurantsDal {
 
 
   public async addDishToRestaurant(newDish: any) {
+    const stam = 5;
     const dish = await DishesDal.prototype.createDish(newDish);
     const data = await Restaurants.findOne({ restaurantName: newDish.restaurantName }).updateOne({ $push: { dishes: dish._id } });
     return data
@@ -47,6 +48,8 @@ export class RestaurantsDal {
     ]);
     return data
   }
+
+
 }
 
 
