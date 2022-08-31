@@ -15,11 +15,20 @@ export class ChefsController {
         return res.send(chef);
     };
 
-    public static async updateChef(req: Request, res: Response) {
-        const params = req.body;
+    public static async addChefRestaurant(req: Request, res: Response) {
         const service = new ChefsService();
-        const chef = await service.updateChef(params);
+        const chef = await service.addChefRestaurant(req.body);
         return res.send(chef);
     };
+
+    public static async getChef(req: Request, res: Response) {
+        const service = new ChefsService();
+        const chef = await service.getChef(req.query);
+        return res.send(chef);
+    };
+
+
+
+
 };
 
