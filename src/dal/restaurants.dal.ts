@@ -14,6 +14,7 @@ export class RestaurantsDal {
       status: restaurant.status,
       newRes: restaurant.newRes,
       dishes: [],
+      heroImg: restaurant.heroImg
 
     });
 

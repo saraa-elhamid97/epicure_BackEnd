@@ -33,6 +33,10 @@ const restaurantsSchema = new mongoose.Schema(
       type: Array,
       required: false
     },
+    heroImg: {
+      type: String,
+      required: true
+    },
   },
   { timestamps: true }
 );
