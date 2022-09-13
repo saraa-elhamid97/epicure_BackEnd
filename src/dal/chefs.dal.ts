@@ -25,8 +25,9 @@ export class ChefsDal {
 
   public async addChefRestaurant(newRes: any) {
     const restaurant = await RestaurantsDal.prototype.createRestaurant(newRes);
-    const data = await Chefs.findOne({ name: newRes.name }).updateOne({ $push: { restaurants: restaurant._id } });
-    return data
+    const data = await Chefs.findOne({ name: newRes.chefName }).updateOne({ $push: { restaurants: restaurant._id } });
+    const chef = await Chefs.findOne({ name: newRes.chefName });
+    return chef;
   }
 
   public async getChef(param: any) {

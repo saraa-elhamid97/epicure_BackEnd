@@ -20,7 +20,7 @@ const dishesSchema = new mongoose.Schema(
         },
         type_img: {
             type: String,
-            required: true
+            required: false
         },
         price: {
             type: Number,
